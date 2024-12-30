@@ -1,17 +1,67 @@
-/* App.css */
-/* In App.css */
+/* General Styles */
 html, body {
   height: 100%;
   margin: 0;
 }
 
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
+/* Container for Image Section (70%) and Button Section (30%) */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.image-section {
+  flex: 7; /* 70% of the screen */
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 20px;
+  text-align: center;
+}
+
+.button-section {
+  flex: 3; /* 30% of the screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.done-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.reset-button, .download-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+}
+
+.reset-button {
+  margin-right: 10px;
+}
+
+/* Image Grid Styles */
 .image-grid {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  padding: 20px;
+  overflow-x: scroll;
+  gap: 10px;
 }
 
 .image-card {
@@ -19,7 +69,6 @@ html, body {
   height: 150px;
   border: 2px solid transparent;
   border-radius: 8px;
-  overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s, border-color 0.3s;
 }
@@ -35,9 +84,18 @@ html, body {
   transform: scale(1.1);
 }
 
-button {
-  font-size: 16px;
-  cursor: pointer;
-  padding: 10px 20px;
+/* Selected Images Display */
+.selected-images {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.selected-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
   border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

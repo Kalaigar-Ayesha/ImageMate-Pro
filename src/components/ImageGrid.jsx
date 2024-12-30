@@ -1,6 +1,4 @@
-// ImageGrid.jsx
 import React from 'react';
-import './ImageGrid.css';
 
 const ImageGrid = ({ images, onImageClick, selected }) => {
   return (
